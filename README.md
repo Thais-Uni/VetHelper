@@ -1,5 +1,5 @@
 # VetHelper
-Sistema VetHelper - Projeto e Construção de Sistema 2016.2 - Unirio
+Sistema VetHelper - Projeto e Construção de Sistemas 2016.2 - Unirio
 Sistema criado para veterinárias e pet shop, capaz de realizar uma série de funções, como:
 - Cadastro de cliente;
 - Exclusão de cadastro de cliente;
