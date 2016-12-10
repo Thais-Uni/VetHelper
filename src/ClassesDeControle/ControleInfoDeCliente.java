@@ -63,8 +63,6 @@ public class ControleInfoDeCliente {
                     arquivoXMLAnimal.removeObjetoXML(listaAnimal.get(i));
             }
             JOptionPane.showMessageDialog(frameInfoClien,"Animal removido com sucesso!");
-            frameInfoClien.dispose();
-            frameConsuCad.setVisible(true);
         }
     }
     

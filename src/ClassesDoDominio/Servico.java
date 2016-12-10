@@ -1,8 +1,9 @@
 package ClassesDoDominio;
 
+import java.io.Serializable;
 import java.util.ArrayList;
 
-public class Servico {
+public class Servico implements Serializable {
     private String nomeCliente, nomeAnimal, tipoServico, dataServico, horarioServico;
     ArrayList<Cliente> listaClientes = new ArrayList<Cliente>();
     
