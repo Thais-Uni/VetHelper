@@ -1,0 +1,40 @@
+
+O SISTEMA VETHELPER
+
+O sistema VetHelper tem o objetivo de agilizar os processos de uma veterinária/pet shop.
+O sistema é capaz de:
+ - Cadastrar clientes e seus devidos animais. 
+ - Consultar o cadastro dos clientes.
+ - Excluir o cadastro de cliente quando solicitado.
+ - Agendar serviços como consultas veterinárias/tosa e banho.
+ - Consultar os serviços que foram agendados.
+ - Desmarcar algum serviço quando solicitado.
+
+----------------------------------------------------------------------------------------
+
+O CÓDIGO
+
+O código é constituído de três pastas diferentes, descritas a seguir. Lembrando que apenas serão mostradas as classes que foram implementadas até o presente momento.
+ - Telas: contém os JFrames das telas do sistema.
+	- MenuPrincipal
+	- ControleDeClientes
+	- CadastroDeCliente
+	- CadastroDeAnimal
+	- AgendamentoDeServico
+ 
+- Classes de Controle: contém as classes que implementam a lógica de cada tela do sistema e a classe para XML.
+	- ControleMenuPrincipal
+	- ControleConDeClien
+	- ControleCadDeClien
+	- ControleCadDeAnimal
+	- ControleAgenDeServ
+	- ArquivoXML
+
+ - Classes do Domínio: contém as classes que implementam as classes do domínio determinadas ao longo do projeto.
+	- Cliente
+	- Animal
+	- Servico
+                              	  
+
+
+

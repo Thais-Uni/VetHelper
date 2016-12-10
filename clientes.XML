@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<java version="1.8.0_40" class="java.beans.XMLDecoder">
+ <object class="java.util.ArrayList">
+  <void method="add">
+   <object class="ClassesDoDominio.Cliente">
+    <void property="emailCliente">
+     <string>igor.passos@domain.com</string>
+    </void>
+    <void property="enderecoCliente">
+     <string>Petropolis</string>
+    </void>
+    <void property="nomeCliente">
+     <string>Igor</string>
+    </void>
+    <void property="telefoneCliente">
+     <string>99854-4521</string>
+    </void>
+   </object>
+  </void>
+  <void method="add">
+   <object class="ClassesDoDominio.Cliente">
+    <void property="emailCliente">
+     <string>thais.ferreira@domain.com</string>
+    </void>
+    <void property="enderecoCliente">
+     <string>Ruas das Amoras</string>
+    </void>
+    <void property="nomeCliente">
+     <string>Thaís</string>
+    </void>
+    <void property="telefoneCliente">
+     <string>98854-4215</string>
+    </void>
+   </object>
+  </void>
+ </object>
+</java>
