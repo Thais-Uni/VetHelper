@@ -3,7 +3,9 @@ package Telas;
 import ClassesDeControle.ControleInfoDeCliente;
 import ClassesDoDominio.Animal;
 import ClassesDoDominio.ArquivoXML;
+import ClassesDoDominio.Cliente;
 import java.awt.Toolkit;
+import java.util.ArrayList;
 import javax.swing.DefaultListModel;
 
 public class InformacoesCliente extends javax.swing.JFrame {
@@ -257,11 +259,11 @@ public class InformacoesCliente extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    public void preencheCadastro(String nome, String endereco, String email, String telefone) {
-        campo_cliente.setText(nome);
-        campo_endereco.setText(endereco);
-        campo_email.setText(email);
-        campo_telefone.setText(telefone);
+    public void preencheCadastro(Cliente cliente) {
+        campo_cliente.setText(cliente.getNomeCliente());
+        campo_endereco.setText(cliente.getEnderecoCliente());
+        campo_email.setText(cliente.getEmailCliente());
+        campo_telefone.setText(cliente.getTelefoneCliente());
     }
 
     public void preencheAnimal(String animal) {

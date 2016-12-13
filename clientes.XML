@@ -4,32 +4,32 @@
   <void method="add">
    <object class="ClassesDoDominio.Cliente">
     <void property="emailCliente">
-     <string>igor.passos@domain.com</string>
+     <string>thais@domain.com</string>
     </void>
     <void property="enderecoCliente">
-     <string>Petropolis</string>
+     <string>JPA</string>
     </void>
     <void property="nomeCliente">
-     <string>Igor</string>
+     <string>Thaís</string>
     </void>
     <void property="telefoneCliente">
-     <string>99854-4521</string>
+     <string>99854-1542</string>
     </void>
    </object>
   </void>
   <void method="add">
    <object class="ClassesDoDominio.Cliente">
     <void property="emailCliente">
-     <string>thais.ferreira@domain.com</string>
+     <string>rod@domain.com</string>
     </void>
     <void property="enderecoCliente">
-     <string>Ruas das Amoras</string>
+     <string>Tijuca</string>
     </void>
     <void property="nomeCliente">
-     <string>Thaís</string>
+     <string>Rod</string>
     </void>
     <void property="telefoneCliente">
-     <string>98854-4215</string>
+     <string>98985-2513</string>
     </void>
    </object>
   </void>

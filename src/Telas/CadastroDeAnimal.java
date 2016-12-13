@@ -1,16 +1,26 @@
 package Telas;
 
 import ClassesDeControle.ControleCadDeAni;
+import ClassesDoDominio.Cliente;
 
 import java.awt.Toolkit;
 
 public class CadastroDeAnimal extends javax.swing.JFrame {
-
+    Cliente cliente;
+    
     public CadastroDeAnimal() {
         initComponents();
         setIcon();
         setLocationRelativeTo(null);
         
+    }
+    
+    public CadastroDeAnimal(Cliente cliente) {
+        initComponents();
+        setIcon();
+        setLocationRelativeTo(null);
+        
+        this.cliente = new Cliente(cliente);
     }
 
    
@@ -227,9 +237,14 @@ public class CadastroDeAnimal extends javax.swing.JFrame {
     public void preencheDono(String dono) {
         campo_dono.setText(dono);
     }
+    
+    public void preencheDono() {
+        campo_dono.setText(cliente.getNomeCliente());
+    }
+    
     private void b_cancelarMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_b_cancelarMouseClicked
         ControleCadDeAni controle = new ControleCadDeAni();
-        controle.chamaControleDeClientes(this);
+        controle.chamaControleDeClientes(this,campo_dono.getText());
     }//GEN-LAST:event_b_cancelarMouseClicked
 
     private void b_cadastrarMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_b_cadastrarMouseClicked
@@ -239,9 +254,9 @@ public class CadastroDeAnimal extends javax.swing.JFrame {
             tipo = "Cão";
         else
             tipo = "Gato";
-        controle.cadastrarAnimal(campo_animal.getText(),campo_raca.getText(),campo_cor.getText(),tipo,campo_dono.getText(),this);
-        campo_animal.setText(""); campo_raca.setText(""); campo_cor.setText("");
-        campo_animal.requestFocus();
+        controle.cadastrarAnimal(campo_animal.getText(),campo_raca.getText(),campo_cor.getText(),tipo, cliente, this);
+        //campo_animal.setText(""); campo_raca.setText(""); campo_cor.setText("");
+        //campo_animal.requestFocus();
     }//GEN-LAST:event_b_cadastrarMouseClicked
 
     public static void main(String args[]) {

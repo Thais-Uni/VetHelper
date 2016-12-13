@@ -3,18 +3,18 @@ package ClassesDoDominio;
 import java.io.Serializable;
 
 public class Animal implements Serializable {
-    private String nomeAnimal, racaAnimal, corAnimal, tipoAnimal, nomeDono;
+    private String nomeAnimal, racaAnimal, corAnimal, tipoAnimal;
     
     public Animal() {
         
     }
     
-    public Animal(String nome, String raca, String cor, String tipo, String dono) {
+    public Animal(String nome, String raca, String cor, String tipo) {
         nomeAnimal = nome;
         racaAnimal = raca;
         corAnimal = cor;
         tipoAnimal = tipo;
-        nomeDono = dono;
+        //nomeDono = dono;
     }
     
     public void setNomeAnimal(String nome) {
@@ -33,9 +33,9 @@ public class Animal implements Serializable {
         tipoAnimal = tipo;
     }
     
-    public void setNomeDono(String dono) {
-        nomeDono = dono;
-    }
+    //public void setNomeDono(String dono) {
+        //nomeDono = dono;
+    //}
     
     public String getNomeAnimal() {
         return nomeAnimal;
@@ -53,8 +53,8 @@ public class Animal implements Serializable {
         return tipoAnimal;
     }
     
-    public String getNomeDono() {
-        return nomeDono;
-    }
+    //public String getNomeDono() {
+        //return nomeDono;
+    //}
     
 }

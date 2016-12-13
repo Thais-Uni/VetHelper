@@ -21,13 +21,18 @@ public class ArquivoXML<Type> {
         return lista;
     }
         
-    public void escreveXML(Type type) {
-        lista.add(type);
+    public void escreveXML(Type type, boolean x) {
+        if(x == true)
+            lista.add(type);
+        else
+            lista.remove(type);
+        
         try {
             XMLEncoder encoder = null;
             try {
                 encoder = new XMLEncoder(new FileOutputStream(nomeArquivo));
                 encoder.writeObject(lista);
+                
             } finally {
                 if(encoder != null)
                     encoder.close();
@@ -37,8 +42,12 @@ public class ArquivoXML<Type> {
         }
     }
     
-    public void removeObjetoXML(Type type) {
-        lista.remove(type);
+    public void escreveClienteXML(Type type, boolean x) {
+        if(x == true)
+            lista.add(type);
+        else
+            lista.remove(type);
+        
         try {
             XMLEncoder encoder = null;
             try {
@@ -54,12 +63,12 @@ public class ArquivoXML<Type> {
     }
     
     public void leXML() {
-       
         try {
             XMLDecoder decoder = null;
             try {
                 decoder = new XMLDecoder(new FileInputStream(nomeArquivo));
-                lista = (ArrayList<Type>) decoder.readObject();
+                lista = (ArrayList<Type>) 
+                decoder.readObject();
             } finally {
                 if(decoder != null)
                     decoder.close();
@@ -68,4 +77,51 @@ public class ArquivoXML<Type> {
             System.out.println(e.getMessage());
         }
     }
+    
+    public void escreveXMLCliente(Type type) {
+        try {
+            XMLEncoder encoder = null;
+            try {
+                encoder = new XMLEncoder(new FileOutputStream(nomeArquivo));
+                encoder.writeObject(lista);
+            } finally {
+                if(encoder != null)
+                    encoder.close();
+            }
+        } catch (IOException e) {
+            System.out.println(e.getMessage());
+        }
+    }
+    
+    
+    /*public void serializacaoObjeto(Type type) {
+        lista.add(type);
+        try {
+            ObjectOutputStream oStream = null;
+            try {
+                oStream = new ObjectOutputStream (new FileOutputStream("clientes.dat"));
+                oStream.writeObject(this);
+            } finally {
+                if(oStream != null)
+                    oStream.close();
+            }
+        } catch (IOException e) {
+            System.out.println(e.getMessage());
+        }
+    }
+    
+    public void desserializacaoObjeto(Type type) {
+        lista.remove(type);
+        try {
+            ObjectInputStream iStream = null;
+            try {
+                iStream = new ObjectInputStream (new FileInputStream("clientes.dat"));
+            } finally {
+                if(iStream != null)
+                    iStream.close();
+            }
+        } catch (IOException e) {
+            System.out.println(e.getMessage());
+        }
+    }*/
 }

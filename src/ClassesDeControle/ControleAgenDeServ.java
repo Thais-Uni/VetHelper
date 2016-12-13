@@ -43,7 +43,7 @@ public class ControleAgenDeServ {
             
         }else {
             Servico servico = new Servico(dono,animal,tipo,data,horario);
-            arquivoXMLServico.escreveXML(servico);
+            arquivoXMLServico.escreveXML(servico,true);
             JOptionPane.showMessageDialog(frameAgen,"Serviço agendado com sucesso!");
             cancelaAgendamento(frameAgen);
         }

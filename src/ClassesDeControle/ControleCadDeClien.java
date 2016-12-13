@@ -12,7 +12,6 @@ import javax.swing.JOptionPane;
 public class ControleCadDeClien {
     ControleDeClientes frameCon = new ControleDeClientes();
     CadastroDeCliente frameCad = new CadastroDeCliente();
-    CadastroDeAnimal frameAni = new CadastroDeAnimal();
     ManipulaArquivo arquivo = new ManipulaArquivo();
     ArquivoXML<Cliente> arquivoXMLCliente = new ArquivoXML<>("clientes.XML");
     
@@ -32,8 +31,11 @@ public class ControleCadDeClien {
     public void chamaCadastroDeAnimal(String nome, String endereco, String email, String telefone, CadastroDeCliente frameCad) {
         if(!nome.equals("") && !endereco.equals("") && !telefone.equals("")) {
             Cliente cliente = new Cliente(nome,endereco,email,telefone);
-            arquivoXMLCliente.escreveXML(cliente);
-            frameAni.preencheDono(nome);
+            //arquivoXMLCliente.escreveXML(cliente,true);
+            
+            CadastroDeAnimal frameAni = new CadastroDeAnimal(cliente);
+            
+            frameAni.preencheDono();
             frameCad.dispose();
             frameAni.setVisible(true);
         }

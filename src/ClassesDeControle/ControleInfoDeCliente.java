@@ -37,7 +37,7 @@ public class ControleInfoDeCliente {
             for(int i = 0; i < listaCliente.size(); i++){
                 String nomeCliente = listaCliente.get(i).getNomeCliente();  
                 if(nomeCliente.equals(nomeDigitado)) {
-                    arquivoXMLCliente.removeObjetoXML(listaCliente.get(i));
+                    arquivoXMLCliente.escreveXML(listaCliente.get(i),false);
                     JOptionPane.showMessageDialog(frameInfoClien,"Cadastro de cliente excluído com sucesso!");
                     frameInfoClien.dispose();
                     frameCon.setVisible(true);
@@ -60,7 +60,7 @@ public class ControleInfoDeCliente {
             ArrayList<Animal> listaAnimal = arquivoXMLAnimal.getLista();
             for(int i = 0; i < listaAnimal.size(); i ++) {
                 if(listaAnimal.get(i).getNomeAnimal().equals(animalSelecionado))
-                    arquivoXMLAnimal.removeObjetoXML(listaAnimal.get(i));
+                    arquivoXMLAnimal.escreveXML(listaAnimal.get(i),false);
             }
             JOptionPane.showMessageDialog(frameInfoClien,"Animal removido com sucesso!");
         }
