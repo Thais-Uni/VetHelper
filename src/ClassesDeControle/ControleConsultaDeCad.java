@@ -22,7 +22,7 @@ public class ControleConsultaDeCad {
         for(int i=0; i < lista.size(); i++){
             String nomeCliente = lista.get(i).getNomeCliente();  
             if(nomeCliente.equals(nomeDigitado)) {
-                frameInfoClien.preencheCadastro(lista.get(i));
+                frameInfoClien.preencherCadastro(lista.get(i));
                 return true;
             }
         }

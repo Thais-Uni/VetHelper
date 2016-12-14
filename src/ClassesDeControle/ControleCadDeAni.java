@@ -10,8 +10,6 @@ import Telas.MenuPrincipal;
 import javax.swing.JOptionPane;
 
 public class ControleCadDeAni {
-    ControleDeClientes frameCon = new ControleDeClientes();
-    CadastroDeAnimal frameAni = new CadastroDeAnimal();
     MenuPrincipal framePrin = new MenuPrincipal();
     ArquivoXML<Animal> arquivoXMLAnimal = new ArquivoXML<>("animais.XML");
     ArquivoXML<Cliente> arquivoXMLCliente = new ArquivoXML<>("clientes.XML"); 
@@ -27,6 +25,7 @@ public class ControleCadDeAni {
             if (resposta == JOptionPane.YES_OPTION) {
                 JOptionPane.showMessageDialog(frameAni,"Cadastro não realizado!");
                 frameAni.dispose();
+                ControleDeClientes frameCon = new ControleDeClientes();
                 frameCon.setVisible(true);
             }
     }
@@ -35,7 +34,6 @@ public class ControleCadDeAni {
         if(!nome.equals("") && !raca.equals("") && !cor.equals("") && !tipo.equals("")) {
             Animal animal = new Animal(nome,raca,cor,tipo);
             cliente.addAnimal(animal);
-            System.out.println(cliente.getListaAnimal().get(0).getNomeAnimal()); //só para testar se o animal está sendo add ao arraylist do cliente
             arquivoXMLCliente.escreveXML(cliente, true);
             arquivoXMLAnimal.escreveXML(animal,true);
             JOptionPane.showMessageDialog(frameAni,"Cadastro realizado com sucesso!");

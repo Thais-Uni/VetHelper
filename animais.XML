@@ -1,38 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<java version="1.8.0_40" class="java.beans.XMLDecoder">
+<java version="1.8.0_111" class="java.beans.XMLDecoder">
  <object class="java.util.ArrayList">
-  <void method="add">
-   <object class="ClassesDoDominio.Animal">
-    <void property="corAnimal">
-     <string>branca</string>
-    </void>
-    <void property="nomeAnimal">
-     <string>Canelinha</string>
-    </void>
-    <void property="racaAnimal">
-     <string>SRD</string>
-    </void>
-    <void property="tipoAnimal">
-     <string>Cão</string>
-    </void>
-   </object>
-  </void>
-  <void method="add">
-   <object class="ClassesDoDominio.Animal">
-    <void property="corAnimal">
-     <string>Caramelo</string>
-    </void>
-    <void property="nomeAnimal">
-     <string>Apolo</string>
-    </void>
-    <void property="racaAnimal">
-     <string>Chow-chow</string>
-    </void>
-    <void property="tipoAnimal">
-     <string>Cão</string>
-    </void>
-   </object>
-  </void>
   <void method="add">
    <object class="ClassesDoDominio.Animal">
     <void property="corAnimal">
@@ -52,13 +20,13 @@
   <void method="add">
    <object class="ClassesDoDominio.Animal">
     <void property="corAnimal">
-     <string>44</string>
+     <string>Preto</string>
     </void>
     <void property="nomeAnimal">
-     <string>444</string>
+     <string>Dieguito</string>
     </void>
     <void property="racaAnimal">
-     <string>44</string>
+     <string>York Shire</string>
     </void>
     <void property="tipoAnimal">
      <string>Cão</string>

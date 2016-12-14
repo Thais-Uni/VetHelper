@@ -260,21 +260,21 @@ public class InformacoesCliente extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    public void preencheCadastro(Cliente cliente) {
+    public void preencherCadastro(Cliente cliente) {
         campo_cliente.setText(cliente.getNomeCliente());
         campo_endereco.setText(cliente.getEnderecoCliente());
         campo_email.setText(cliente.getEmailCliente());
         campo_telefone.setText(cliente.getTelefoneCliente());
-        //this.lista_ani.setModel(model);
-        //ArrayList<Animal> listaAnimal = cliente.getListaAnimal();
-        //for (int i = 0; i < listaAnimal.size(); i++) {
-            //model.add(i, listaAnimal.get(i));
-        //}
+        this.lista_ani.setModel(model);
+        ArrayList<Animal> listaAnimal = cliente.getListaAnimal();
+        for (int i = 0; i < listaAnimal.size(); i++) {
+            model.add(i, listaAnimal.get(i).getNomeAnimal());
+        }
         //System.out.println(cliente.getListaAnimal().get(0).getNomeAnimal());
     }
     
-    public void removeAnimal(Cliente cliente) {
-        String nomeAnimal = lista_ani.getName();
+    public void removerAnimalDaLista(Cliente cliente) {
+        //String nomeAnimal = lista_ani.getName();
         //System.out.println(nomeAnimal);
         //model.remove(selectedIndex);
         //cliente.removeAnimal(cliente.getListaAnimal().get(selectedIndex));
@@ -289,16 +289,16 @@ public class InformacoesCliente extends javax.swing.JFrame {
     }//GEN-LAST:event_b_voltarMouseClicked
 
     private void b_add_aniMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_b_add_aniMouseClicked
-        controle.adicionarAnimal(this,campo_cliente.getText());
+        controle.adicionaAnimal(this,campo_cliente.getText());
     }//GEN-LAST:event_b_add_aniMouseClicked
 
     private void b_excluir1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_b_excluir1MouseClicked
-        controle.excluirCadastro(campo_cliente.getText(),this);
+        controle.excluiCadastroCliente(campo_cliente.getText(),this);
     }//GEN-LAST:event_b_excluir1MouseClicked
 
     private void b_remove_aniMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_b_remove_aniMouseClicked
         //removeAnimal();
-        controle.removerAnimal(this,model.size(),model.toString());
+        controle.removeAnimal(this,model.size(),model.toString());
     }//GEN-LAST:event_b_remove_aniMouseClicked
 
     public static void main(String args[]) {

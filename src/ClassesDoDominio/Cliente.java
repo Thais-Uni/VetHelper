@@ -50,7 +50,7 @@ public class Cliente implements Serializable {
         telefoneCliente = telefone;
     }
     
-    public void setAnimal(ArrayList<Animal> listaNovaAnimal) {
+    public void setListaAnimal(ArrayList<Animal> listaNovaAnimal) {
         listaAnimal = listaNovaAnimal;
     }
     

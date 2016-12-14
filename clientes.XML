@@ -1,51 +1,71 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<java version="1.8.0_40" class="java.beans.XMLDecoder">
+<java version="1.8.0_111" class="java.beans.XMLDecoder">
  <object class="java.util.ArrayList">
   <void method="add">
-   <object class="ClassesDoDominio.Cliente">
+   <object class="ClassesDoDominio.Cliente" id="Cliente0">
     <void property="emailCliente">
-     <string>thais@domain.com</string>
+     <string>paulo@domain.com</string>
     </void>
     <void property="enderecoCliente">
-     <string>JPA</string>
+     <string>Cabo Frio</string>
+    </void>
+    <void property="listaAnimal">
+     <void method="add">
+      <object class="ClassesDoDominio.Animal">
+       <void property="corAnimal">
+        <string>Preto</string>
+       </void>
+       <void property="nomeAnimal">
+        <string>Donna</string>
+       </void>
+       <void property="racaAnimal">
+        <string>York Shire</string>
+       </void>
+       <void property="tipoAnimal">
+        <string>Cão</string>
+       </void>
+      </object>
+     </void>
     </void>
     <void property="nomeCliente">
-     <string>Thaís</string>
+     <string>Paulo</string>
     </void>
     <void property="telefoneCliente">
-     <string>99854-1542</string>
+     <string>99856-3342</string>
     </void>
    </object>
   </void>
   <void method="add">
-   <object class="ClassesDoDominio.Cliente">
+   <object class="ClassesDoDominio.Cliente" id="Cliente1">
     <void property="emailCliente">
-     <string>rod@domain.com</string>
+     <string>paulo@domain.com</string>
     </void>
     <void property="enderecoCliente">
-     <string>Tijuca</string>
+     <string>Cabo Frio</string>
+    </void>
+    <void property="listaAnimal">
+     <void method="add">
+      <object class="ClassesDoDominio.Animal">
+       <void property="corAnimal">
+        <string>Preto</string>
+       </void>
+       <void property="nomeAnimal">
+        <string>Dieguito</string>
+       </void>
+       <void property="racaAnimal">
+        <string>York Shire</string>
+       </void>
+       <void property="tipoAnimal">
+        <string>Cão</string>
+       </void>
+      </object>
+     </void>
     </void>
     <void property="nomeCliente">
-     <string>Rod</string>
+     <string>Paulo</string>
     </void>
     <void property="telefoneCliente">
-     <string>98985-2513</string>
-    </void>
-   </object>
-  </void>
-  <void method="add">
-   <object class="ClassesDoDominio.Cliente">
-    <void property="emailCliente">
-     <string>hjh</string>
-    </void>
-    <void property="enderecoCliente">
-     <string>tdas</string>
-    </void>
-    <void property="nomeCliente">
-     <string>Oie</string>
-    </void>
-    <void property="telefoneCliente">
-     <string>jhj</string>
+     <string>99856-3342</string>
     </void>
    </object>
   </void>
