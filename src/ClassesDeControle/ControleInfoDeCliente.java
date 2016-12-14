@@ -38,6 +38,9 @@ public class ControleInfoDeCliente {
                 String nomeCliente = listaCliente.get(i).getNomeCliente();  
                 if(nomeCliente.equals(nomeDigitado)) {
                     arquivoXMLCliente.escreveXML(listaCliente.get(i),false);
+                    ArrayList<Animal> listaAnimal = listaCliente.get(i).getListaAnimal();
+                    for(int j = 0; j < listaAnimal.size(); j ++)
+                        arquivoXMLAnimal.escreveXML(listaAnimal.get(j), true);
                     JOptionPane.showMessageDialog(frameInfoClien,"Cadastro de cliente excluído com sucesso!");
                     frameInfoClien.dispose();
                     frameCon.setVisible(true);
@@ -53,15 +56,13 @@ public class ControleInfoDeCliente {
         frameCadAni.setVisible(true);
     }
     
-    public void removerAnimal(InformacoesCliente frameInfoClien, int quantAnimais, String animalSelecionado) {
-        if(quantAnimais == 1)
+    public void removerAnimal(InformacoesCliente frameInfoClien, Cliente cliente) {
+        ArrayList<Animal> listaAnimal = cliente.getListaAnimal();
+        if(listaAnimal.size() == 1) 
             JOptionPane.showMessageDialog(frameInfoClien,"Não é possível remover o animal!");
         else {
-            ArrayList<Animal> listaAnimal = arquivoXMLAnimal.getLista();
-            for(int i = 0; i < listaAnimal.size(); i ++) {
-                if(listaAnimal.get(i).getNomeAnimal().equals(animalSelecionado))
-                    arquivoXMLAnimal.escreveXML(listaAnimal.get(i),false);
-            }
+            for(int i = 0; i < listaAnimal.size(); i ++)
+                arquivoXMLAnimal.escreveXML(listaAnimal.get(i), false);
             JOptionPane.showMessageDialog(frameInfoClien,"Animal removido com sucesso!");
         }
     }

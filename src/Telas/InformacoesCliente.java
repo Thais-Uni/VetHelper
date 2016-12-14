@@ -11,6 +11,7 @@ import javax.swing.DefaultListModel;
 public class InformacoesCliente extends javax.swing.JFrame {
     ControleInfoDeCliente controle = new ControleInfoDeCliente();
     ArquivoXML<Animal> arquivoXMLAnimal = new ArquivoXML<>("animais.XML");
+    ArquivoXML<Cliente> arquivoXMLCliente = new ArquivoXML<>("clientes.XML");
     DefaultListModel model = new DefaultListModel();
     
     public InformacoesCliente() {
@@ -264,17 +265,23 @@ public class InformacoesCliente extends javax.swing.JFrame {
         campo_endereco.setText(cliente.getEnderecoCliente());
         campo_email.setText(cliente.getEmailCliente());
         campo_telefone.setText(cliente.getTelefoneCliente());
-    }
-
-    public void preencheAnimal(String animal) {
-        this.lista_ani.setModel(model);
-        model.add(model.getSize(), animal);
+        //this.lista_ani.setModel(model);
+        //ArrayList<Animal> listaAnimal = cliente.getListaAnimal();
+        //for (int i = 0; i < listaAnimal.size(); i++) {
+            //model.add(i, listaAnimal.get(i));
+        //}
+        //System.out.println(cliente.getListaAnimal().get(0).getNomeAnimal());
     }
     
-    public int removeAnimal() {
-        int selectedIndex = lista_ani.getSelectedIndex();
-        model.remove(selectedIndex);
-        return selectedIndex;
+    public void removeAnimal(Cliente cliente) {
+        String nomeAnimal = lista_ani.getName();
+        //System.out.println(nomeAnimal);
+        //model.remove(selectedIndex);
+        //cliente.removeAnimal(cliente.getListaAnimal().get(selectedIndex));
+        //arquivoXMLAnimal.leXML();
+        //ArrayList<Animal> listaAnimal = arquivoXMLAnimal.getList();
+        //arquivoXMLAnimal.escreveXML(getLista());
+        //return selectedIndex;
     }
     
     private void b_voltarMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_b_voltarMouseClicked
@@ -290,7 +297,7 @@ public class InformacoesCliente extends javax.swing.JFrame {
     }//GEN-LAST:event_b_excluir1MouseClicked
 
     private void b_remove_aniMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_b_remove_aniMouseClicked
-        removeAnimal();
+        //removeAnimal();
         controle.removerAnimal(this,model.size(),model.toString());
     }//GEN-LAST:event_b_remove_aniMouseClicked
 

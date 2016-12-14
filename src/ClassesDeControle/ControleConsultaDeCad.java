@@ -22,19 +22,11 @@ public class ControleConsultaDeCad {
         for(int i=0; i < lista.size(); i++){
             String nomeCliente = lista.get(i).getNomeCliente();  
             if(nomeCliente.equals(nomeDigitado)) {
-                verificaAnimal(lista.get(i));
                 frameInfoClien.preencheCadastro(lista.get(i));
                 return true;
             }
         }
         return false;
-    }
-    
-    public void verificaAnimal(Cliente cliente) {
-        ArrayList<Animal> listaAnimal = cliente.getListaAnimal();
-        for(int i=0; i < listaAnimal.size(); i++){
-            frameInfoClien.preencheAnimal(listaAnimal.get(i).getNomeAnimal());
-        }
     }
     
     public void chamaInfoDeCliente(ConsultaDeCadastro frameConsultaCad, String nomeDigitado) {

@@ -7,7 +7,6 @@ import ClassesDoDominio.Cliente;
 import Telas.CadastroDeAnimal;
 import Telas.ControleDeClientes;
 import Telas.MenuPrincipal;
-import java.util.ArrayList;
 import javax.swing.JOptionPane;
 
 public class ControleCadDeAni {
@@ -22,24 +21,11 @@ public class ControleCadDeAni {
        arquivoXMLCliente.leXML();
        
     }
-    
-    public Cliente retornaObjeto(ArrayList<Cliente> listaCliente, String str) {
-        Cliente cliente = null;
-        for(int i = 0; i < listaCliente.size(); i ++) {
-            if(listaCliente.get(i).getNomeCliente().equals(str)) {
-                cliente = listaCliente.get(i);
-                break;
-            }
-        }
-        return cliente;
-    }
-    
+        
     public void chamaControleDeClientes(CadastroDeAnimal frameAni, String dono) {
         int resposta = JOptionPane.showConfirmDialog(null, "Deseja realmente cancelar?","Cancelar?", JOptionPane.YES_NO_OPTION);
             if (resposta == JOptionPane.YES_OPTION) {
-                ArrayList<Cliente> listaCliente = arquivoXMLCliente.getLista();
-                arquivoXMLCliente.escreveXML(retornaObjeto(listaCliente, dono),false);
-                JOptionPane.showMessageDialog(frameAni,"Cadastro cancelado!");
+                JOptionPane.showMessageDialog(frameAni,"Cadastro não realizado!");
                 frameAni.dispose();
                 frameCon.setVisible(true);
             }
@@ -49,6 +35,7 @@ public class ControleCadDeAni {
         if(!nome.equals("") && !raca.equals("") && !cor.equals("") && !tipo.equals("")) {
             Animal animal = new Animal(nome,raca,cor,tipo);
             cliente.addAnimal(animal);
+            System.out.println(cliente.getListaAnimal().get(0).getNomeAnimal()); //só para testar se o animal está sendo add ao arraylist do cliente
             arquivoXMLCliente.escreveXML(cliente, true);
             arquivoXMLAnimal.escreveXML(animal,true);
             JOptionPane.showMessageDialog(frameAni,"Cadastro realizado com sucesso!");
@@ -58,17 +45,4 @@ public class ControleCadDeAni {
         else
             JOptionPane.showMessageDialog(frameAni, "Favor preencher todos os campos.");
     }
-    
 }
-
-
-
-/*arquivoXMLCliente.leXML();
-            ArrayList<Cliente> listaCliente = arquivoXMLCliente.getLista();
-            Cliente cliente = retornaObjeto(listaCliente, dono);
-            cliente.addAnimal(animal); cliente.setAnimal(cliente.getListaAnimal());
-            Cliente cliente2 = new Cliente(cliente.getNomeCliente(), cliente.getEnderecoCliente(), cliente.getEmailCliente(), cliente.getTelefoneCliente(),cliente.getListaAnimal());
-            arquivoXMLCliente.escreveXML(cliente,false);
-            arquivoXMLCliente.leXML();
-            arquivoXMLCliente.escreveXML(cliente2,true);
-            */

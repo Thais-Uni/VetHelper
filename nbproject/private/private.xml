@@ -2,6 +2,14 @@
 <project-private xmlns="http://www.netbeans.org/ns/project-private/1">
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
-        <group/>
+        <group>
+            <file>file:/C:/Users/User/Documents/GitHub/VetHelper/src/ClassesDeControle/ControleCadDeAni.java</file>
+            <file>file:/C:/Users/User/Documents/GitHub/VetHelper/src/ClassesDoDominio/ArquivoXML.java</file>
+            <file>file:/C:/Users/User/Documents/GitHub/VetHelper/src/ClassesDeControle/ControleConsultaDeCad.java</file>
+            <file>file:/C:/Users/User/Documents/GitHub/VetHelper/src/Telas/InformacoesCliente.java</file>
+            <file>file:/C:/Users/User/Documents/GitHub/VetHelper/src/ClassesDeControle/ControleInfoDeCliente.java</file>
+            <file>file:/C:/Users/User/Documents/GitHub/VetHelper/src/ClassesDoDominio/Animal.java</file>
+            <file>file:/C:/Users/User/Documents/GitHub/VetHelper/src/ClassesDoDominio/Cliente.java</file>
+        </group>
     </open-files>
 </project-private>

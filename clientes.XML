@@ -33,5 +33,21 @@
     </void>
    </object>
   </void>
+  <void method="add">
+   <object class="ClassesDoDominio.Cliente">
+    <void property="emailCliente">
+     <string>hjh</string>
+    </void>
+    <void property="enderecoCliente">
+     <string>tdas</string>
+    </void>
+    <void property="nomeCliente">
+     <string>Oie</string>
+    </void>
+    <void property="telefoneCliente">
+     <string>jhj</string>
+    </void>
+   </object>
+  </void>
  </object>
 </java>

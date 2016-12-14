@@ -33,5 +33,37 @@
     </void>
    </object>
   </void>
+  <void method="add">
+   <object class="ClassesDoDominio.Animal">
+    <void property="corAnimal">
+     <string>Preto</string>
+    </void>
+    <void property="nomeAnimal">
+     <string>Donna</string>
+    </void>
+    <void property="racaAnimal">
+     <string>York Shire</string>
+    </void>
+    <void property="tipoAnimal">
+     <string>Cão</string>
+    </void>
+   </object>
+  </void>
+  <void method="add">
+   <object class="ClassesDoDominio.Animal">
+    <void property="corAnimal">
+     <string>44</string>
+    </void>
+    <void property="nomeAnimal">
+     <string>444</string>
+    </void>
+    <void property="racaAnimal">
+     <string>44</string>
+    </void>
+    <void property="tipoAnimal">
+     <string>Cão</string>
+    </void>
+   </object>
+  </void>
  </object>
 </java>
