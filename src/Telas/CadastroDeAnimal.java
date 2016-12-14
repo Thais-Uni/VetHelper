@@ -255,8 +255,6 @@ public class CadastroDeAnimal extends javax.swing.JFrame {
         else
             tipo = "Gato";
         controle.cadastrarAnimal(campo_animal.getText(),campo_raca.getText(),campo_cor.getText(),tipo, cliente, this);
-        //campo_animal.setText(""); campo_raca.setText(""); campo_cor.setText("");
-        //campo_animal.requestFocus();
     }//GEN-LAST:event_b_cadastrarMouseClicked
 
     public static void main(String args[]) {

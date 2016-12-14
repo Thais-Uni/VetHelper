@@ -4,7 +4,6 @@ import java.io.Serializable;
 import java.util.ArrayList;
 
 public class Cliente implements Serializable {
-    //public static final long serialVersionUID = 1L; 
     private String nomeCliente, enderecoCliente, emailCliente, telefoneCliente;
     private ArrayList<Animal> listaAnimal = new ArrayList<>();;
     
@@ -17,6 +16,7 @@ public class Cliente implements Serializable {
         enderecoCliente = cliente.getEnderecoCliente();
         emailCliente = cliente.getEmailCliente();
         telefoneCliente = cliente.getTelefoneCliente();
+        listaAnimal = cliente.getListaAnimal();
     }
     
     public Cliente(String nome, String endereco, String email, String telefone) {
@@ -24,14 +24,6 @@ public class Cliente implements Serializable {
         enderecoCliente = endereco;
         emailCliente = email;
         telefoneCliente = telefone;
-    }
-    
-    public Cliente(String nome, String endereco, String email, String telefone, ArrayList<Animal> animal) {
-        nomeCliente = nome;
-        enderecoCliente = endereco;
-        emailCliente = email;
-        telefoneCliente = telefone;
-        //listaAnimal = animal;
     }
     
     public void setNomeCliente(String nome) {

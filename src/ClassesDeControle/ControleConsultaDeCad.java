@@ -11,7 +11,6 @@ import java.util.ArrayList;
 import javax.swing.JOptionPane;
 
 public class ControleConsultaDeCad {
-    ControleDeClientes frameCon = new ControleDeClientes();
     InformacoesCliente frameInfoClien = new InformacoesCliente();
     ArquivoXML<Cliente> arquivoXMLCliente = new ArquivoXML<>("clientes.XML"); 
     ArquivoXML<Animal> arquivoXMLAnimal = new ArquivoXML<>("animais.XML");
@@ -40,6 +39,7 @@ public class ControleConsultaDeCad {
    
     public void chamaControleDeClientes(ConsultaDeCadastro frameConsultaCad) {
         frameConsultaCad.dispose();
+        ControleDeClientes frameCon = new ControleDeClientes();
         frameCon.setVisible(true);
     }
     

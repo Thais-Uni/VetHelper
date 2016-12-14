@@ -4,13 +4,13 @@
   <void method="add">
    <object class="ClassesDoDominio.Animal">
     <void property="corAnimal">
-     <string>Preto</string>
+     <string>Braco</string>
     </void>
     <void property="nomeAnimal">
-     <string>Donna</string>
+     <string>Canelinha</string>
     </void>
     <void property="racaAnimal">
-     <string>York Shire</string>
+     <string>SRD</string>
     </void>
     <void property="tipoAnimal">
      <string>Cão</string>
@@ -23,10 +23,26 @@
      <string>Preto</string>
     </void>
     <void property="nomeAnimal">
-     <string>Dieguito</string>
+     <string>Pity</string>
     </void>
     <void property="racaAnimal">
-     <string>York Shire</string>
+     <string>Pitbul</string>
+    </void>
+    <void property="tipoAnimal">
+     <string>Cão</string>
+    </void>
+   </object>
+  </void>
+  <void method="add">
+   <object class="ClassesDoDominio.Animal">
+    <void property="corAnimal">
+     <string>Branco</string>
+    </void>
+    <void property="nomeAnimal">
+     <string>Flocos</string>
+    </void>
+    <void property="racaAnimal">
+     <string>SRD</string>
     </void>
     <void property="tipoAnimal">
      <string>Cão</string>
