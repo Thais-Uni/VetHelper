@@ -14,10 +14,12 @@ public class InformacoesCliente extends javax.swing.JFrame {
     ArquivoXML<Cliente> arquivoXMLCliente = new ArquivoXML<>("clientes.XML");
     DefaultListModel model = new DefaultListModel();
     
+    
     public InformacoesCliente() {
         initComponents();
         setIcon();
         setLocationRelativeTo(null);
+        this.lista_ani.setModel(model);
         
     }
    
@@ -265,23 +267,24 @@ public class InformacoesCliente extends javax.swing.JFrame {
         campo_endereco.setText(cliente.getEnderecoCliente());
         campo_email.setText(cliente.getEmailCliente());
         campo_telefone.setText(cliente.getTelefoneCliente());
-        this.lista_ani.setModel(model);
         ArrayList<Animal> listaAnimal = cliente.getListaAnimal();
         for (int i = 0; i < listaAnimal.size(); i++) {
             model.add(i, listaAnimal.get(i).getNomeAnimal());
         }
-        //System.out.println(cliente.getListaAnimal().get(0).getNomeAnimal());
     }
     
-    public void removerAnimalDaLista(Cliente cliente) {
+    public int retornaIndexSelecionado() {
+        int selectedIndex = lista_ani.getSelectedIndex();
+        return selectedIndex;
+    }
+    public void removeAnimalDaLista(int index) {
         //String nomeAnimal = lista_ani.getName();
         //System.out.println(nomeAnimal);
-        //model.remove(selectedIndex);
+        model.remove(index);
         //cliente.removeAnimal(cliente.getListaAnimal().get(selectedIndex));
         //arquivoXMLAnimal.leXML();
         //ArrayList<Animal> listaAnimal = arquivoXMLAnimal.getList();
         //arquivoXMLAnimal.escreveXML(getLista());
-        //return selectedIndex;
     }
     
     private void b_voltarMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_b_voltarMouseClicked
@@ -297,8 +300,12 @@ public class InformacoesCliente extends javax.swing.JFrame {
     }//GEN-LAST:event_b_excluir1MouseClicked
 
     private void b_remove_aniMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_b_remove_aniMouseClicked
-        //removeAnimal();
-        controle.removeAnimal(this,model.size(),model.toString());
+        int itensNaLista = model.size();
+        controle.removeAnimal(this, itensNaLista, campo_cliente.getText(), model.get(retornaIndexSelecionado()).toString());
+        if(itensNaLista > 1)
+            removeAnimalDaLista(retornaIndexSelecionado());
+        //itensNaLista--;
+        //System.out.println(model.get(retornaIndexSelecionado()).toString());
     }//GEN-LAST:event_b_remove_aniMouseClicked
 
     public static void main(String args[]) {

@@ -30,11 +30,7 @@ public class ControleCadDeAni {
     public void cadastrarAnimal(String nome, String raca, String cor, String tipo, Cliente cliente, CadastroDeAnimal frameAni) {
         if(!nome.equals("") && !raca.equals("") && !cor.equals("") && !tipo.equals("")) {
             Animal animal = new Animal(nome,raca,cor,tipo);
-            //Cliente cliente2 = new Cliente(cliente);
-            //arquivoXMLCliente.leXML();
-            //arquivoXMLCliente.escreveXML(cliente, false);
             cliente.addAnimal(animal);
-            //arquivoXMLCliente.leXML();
             arquivoXMLCliente.escreveXML(cliente, true);
             arquivoXMLAnimal.escreveXML(animal,true);
             JOptionPane.showMessageDialog(frameAni,"Cadastro realizado com sucesso!");

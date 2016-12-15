@@ -19,7 +19,6 @@ public class CadastroDeAnimal extends javax.swing.JFrame {
         initComponents();
         setIcon();
         setLocationRelativeTo(null);
-        
         this.cliente = new Cliente(cliente);
     }
 

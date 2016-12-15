@@ -13,9 +13,6 @@ import javax.swing.JOptionPane;
 
 
 public class ControleInfoDeCliente {
-    ConsultaDeCadastro frameConsuCad = new ConsultaDeCadastro();
-    ControleDeClientes frameCon = new ControleDeClientes();
-    
     ArquivoXML<Cliente> arquivoXMLCliente = new ArquivoXML<>("clientes.XML");
     ArquivoXML<Animal> arquivoXMLAnimal = new ArquivoXML<>("animais.XML");
     
@@ -26,6 +23,7 @@ public class ControleInfoDeCliente {
     
     public void chamaConsultaDeCadastro(InformacoesCliente frameInfoClien) {
         frameInfoClien.dispose();
+        ConsultaDeCadastro frameConsuCad = new ConsultaDeCadastro();
         frameConsuCad.setVisible(true);
     }
     
@@ -40,16 +38,31 @@ public class ControleInfoDeCliente {
         return listaCliente.get(i);
     }
     
+    public void excluiAnimal(ArrayList<Animal> listaAnimalXML, ArrayList<Animal> listaAnimalCliente) {
+        for(int i = 0; i < listaAnimalXML.size(); i ++) {
+                for(int j = 0; j < listaAnimalCliente.size(); j++) {
+                    if(listaAnimalCliente.get(j).getNomeAnimal().equals(listaAnimalXML.get(i).getNomeAnimal()))
+                        arquivoXMLAnimal.escreveXML(listaAnimalXML.get(i), false);
+                }
+            }
+    }
+    
     public void excluiCadastroCliente(String nomeDigitado,InformacoesCliente frameInfoClien) {
         int resposta = JOptionPane.showConfirmDialog(null, "Deseja realmente excluir o cadastro do cliente?","Excluir?", JOptionPane.YES_NO_OPTION);
         if (resposta == JOptionPane.YES_OPTION) {
             Cliente cliente = retornaCliente(nomeDigitado);
-            ArrayList<Animal> listaAnimal = cliente.getListaAnimal();
-            for(int i = 0; i < listaAnimal.size(); i ++)
-                arquivoXMLAnimal.escreveXML(listaAnimal.get(i), false);
-            arquivoXMLCliente.escreveXML(cliente,false);
+            ArrayList<Animal> listaAnimalCliente = cliente.getListaAnimal();
+            ArrayList<Animal> listaAnimalXML = arquivoXMLAnimal.getLista();
+            for(int i = 0; i < listaAnimalXML.size(); i ++) {
+                for(int j = 0; j < listaAnimalCliente.size(); j++) {
+                    if(listaAnimalCliente.get(j).getNomeAnimal().equals(listaAnimalXML.get(i).getNomeAnimal()))
+                        arquivoXMLAnimal.escreveXML(listaAnimalXML.get(i), false);
+                }
+            }
+            arquivoXMLCliente.escreveXML(cliente, false);
             JOptionPane.showMessageDialog(frameInfoClien,"Cadastro de cliente excluído com sucesso!");
             frameInfoClien.dispose();
+            ControleDeClientes frameCon = new ControleDeClientes();
             frameCon.setVisible(true);
         }
     }
@@ -62,11 +75,12 @@ public class ControleInfoDeCliente {
         frameCadAni.setVisible(true);
     }
     
-    public void removeAnimal(InformacoesCliente frameInfoClien, int quant, String nomeAnimal) {
-        if(quant == 1)
+    public void removeAnimal(InformacoesCliente frameInfoClien, int quant, String nomeCliente, String nomeAnimal) {
+        if(quant <= 1)
             JOptionPane.showMessageDialog(frameInfoClien,"Não é possível remover o animal!");
         else {
-            ArrayList<Animal> listaAnimal = arquivoXMLAnimal.getLista();
+            Cliente cliente = retornaCliente(nomeCliente);
+            ArrayList<Animal> listaAnimal = cliente.getListaAnimal();
             for(int i = 0; i < listaAnimal.size(); i ++) {
                 if(listaAnimal.get(i).getNomeAnimal().equals(nomeAnimal)) {
                     arquivoXMLAnimal.escreveXML(listaAnimal.get(i), false);

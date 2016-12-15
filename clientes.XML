@@ -4,7 +4,7 @@
   <void method="add">
    <object class="ClassesDoDominio.Cliente" id="Cliente0">
     <void property="emailCliente">
-     <string>thais@domain.com</string>
+     <string>paulo@domain.com</string>
     </void>
     <void property="enderecoCliente">
      <string>JPA</string>
@@ -13,13 +13,13 @@
      <void method="add">
       <object class="ClassesDoDominio.Animal">
        <void property="corAnimal">
-        <string>Braco</string>
+        <string>Preto</string>
        </void>
        <void property="nomeAnimal">
-        <string>Canelinha</string>
+        <string>Donna</string>
        </void>
        <void property="racaAnimal">
-        <string>SRD</string>
+        <string>York Shire</string>
        </void>
        <void property="tipoAnimal">
         <string>Cão</string>
@@ -32,26 +32,10 @@
         <string>Preto</string>
        </void>
        <void property="nomeAnimal">
-        <string>Pity</string>
+        <string>Diego</string>
        </void>
        <void property="racaAnimal">
-        <string>Pitbul</string>
-       </void>
-       <void property="tipoAnimal">
-        <string>Cão</string>
-       </void>
-      </object>
-     </void>
-     <void method="add">
-      <object class="ClassesDoDominio.Animal">
-       <void property="corAnimal">
-        <string>Branco</string>
-       </void>
-       <void property="nomeAnimal">
-        <string>Flocos</string>
-       </void>
-       <void property="racaAnimal">
-        <string>SRD</string>
+        <string>York Shire </string>
        </void>
        <void property="tipoAnimal">
         <string>Cão</string>
@@ -60,10 +44,10 @@
      </void>
     </void>
     <void property="nomeCliente">
-     <string>Thaís</string>
+     <string>Paulo</string>
     </void>
     <void property="telefoneCliente">
-     <string>99837-0093</string>
+     <string>97384-0034</string>
     </void>
    </object>
   </void>
