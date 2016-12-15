@@ -4,38 +4,22 @@
   <void method="add">
    <object class="ClassesDoDominio.Cliente" id="Cliente0">
     <void property="emailCliente">
-     <string>paulo@domain.com</string>
+     <string>AA</string>
     </void>
     <void property="enderecoCliente">
-     <string>JPA</string>
+     <string>AA</string>
     </void>
     <void property="listaAnimal">
      <void method="add">
       <object class="ClassesDoDominio.Animal">
        <void property="corAnimal">
-        <string>Preto</string>
+        <string>11</string>
        </void>
        <void property="nomeAnimal">
-        <string>Donna</string>
+        <string>11</string>
        </void>
        <void property="racaAnimal">
-        <string>York Shire</string>
-       </void>
-       <void property="tipoAnimal">
-        <string>Cão</string>
-       </void>
-      </object>
-     </void>
-     <void method="add">
-      <object class="ClassesDoDominio.Animal">
-       <void property="corAnimal">
-        <string>Preto</string>
-       </void>
-       <void property="nomeAnimal">
-        <string>Diego</string>
-       </void>
-       <void property="racaAnimal">
-        <string>York Shire </string>
+        <string>11</string>
        </void>
        <void property="tipoAnimal">
         <string>Cão</string>
@@ -44,10 +28,144 @@
      </void>
     </void>
     <void property="nomeCliente">
-     <string>Paulo</string>
+     <string>AA</string>
     </void>
     <void property="telefoneCliente">
-     <string>97384-0034</string>
+     <string>AA</string>
+    </void>
+   </object>
+  </void>
+  <void method="add">
+   <object class="ClassesDoDominio.Cliente" id="Cliente1">
+    <void property="emailCliente">
+     <string>BB</string>
+    </void>
+    <void property="enderecoCliente">
+     <string>BB</string>
+    </void>
+    <void property="listaAnimal">
+     <void method="add">
+      <object class="ClassesDoDominio.Animal">
+       <void property="corAnimal">
+        <string>22</string>
+       </void>
+       <void property="nomeAnimal">
+        <string>22</string>
+       </void>
+       <void property="racaAnimal">
+        <string>22</string>
+       </void>
+       <void property="tipoAnimal">
+        <string>Cão</string>
+       </void>
+      </object>
+     </void>
+    </void>
+    <void property="nomeCliente">
+     <string>BB</string>
+    </void>
+    <void property="telefoneCliente">
+     <string>BB</string>
+    </void>
+   </object>
+  </void>
+  <void method="add">
+   <object class="ClassesDoDominio.Cliente" id="Cliente2">
+    <void property="emailCliente">
+     <string>AA</string>
+    </void>
+    <void property="enderecoCliente">
+     <string>AA</string>
+    </void>
+    <void property="listaAnimal">
+     <void method="add">
+      <object class="ClassesDoDominio.Animal">
+       <void property="corAnimal">
+        <string>11</string>
+       </void>
+       <void property="nomeAnimal">
+        <string>11</string>
+       </void>
+       <void property="racaAnimal">
+        <string>11</string>
+       </void>
+       <void property="tipoAnimal">
+        <string>Cão</string>
+       </void>
+      </object>
+     </void>
+     <void method="add">
+      <object class="ClassesDoDominio.Animal">
+       <void property="corAnimal">
+        <string>33</string>
+       </void>
+       <void property="nomeAnimal">
+        <string>33</string>
+       </void>
+       <void property="racaAnimal">
+        <string>33</string>
+       </void>
+       <void property="tipoAnimal">
+        <string>Gato</string>
+       </void>
+      </object>
+     </void>
+    </void>
+    <void property="nomeCliente">
+     <string>AA</string>
+    </void>
+    <void property="telefoneCliente">
+     <string>AA</string>
+    </void>
+   </object>
+  </void>
+  <void method="add">
+   <object class="ClassesDoDominio.Cliente" id="Cliente3">
+    <void property="emailCliente">
+     <string>BB</string>
+    </void>
+    <void property="enderecoCliente">
+     <string>BB</string>
+    </void>
+    <void property="listaAnimal">
+     <void method="add">
+      <object class="ClassesDoDominio.Animal">
+       <void property="corAnimal">
+        <string>22</string>
+       </void>
+       <void property="nomeAnimal">
+        <string>22</string>
+       </void>
+       <void property="racaAnimal">
+        <string>22</string>
+       </void>
+       <void property="tipoAnimal">
+        <string>Cão</string>
+       </void>
+      </object>
+     </void>
+     <void method="add">
+      <object class="ClassesDoDominio.Animal">
+       <void property="corAnimal">
+        <string>55</string>
+       </void>
+       <void property="nomeAnimal">
+        <string>55</string>
+       </void>
+       <void property="racaAnimal">
+        <string>55</string>
+       </void>
+       <void property="tipoAnimal">
+        <string>Cão</string>
+       </void>
+      </object>
+     </void>
+    </void>
+    <void property="nomeCliente">
+     <string>BB</string>
+    </void>
+    <void property="telefoneCliente">
+     <string>BB</string>
     </void>
    </object>
   </void>

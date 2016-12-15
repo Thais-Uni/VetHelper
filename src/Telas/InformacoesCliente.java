@@ -20,9 +20,8 @@ public class InformacoesCliente extends javax.swing.JFrame {
         setIcon();
         setLocationRelativeTo(null);
         this.lista_ani.setModel(model);
-        
     }
-   
+    
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
@@ -278,13 +277,7 @@ public class InformacoesCliente extends javax.swing.JFrame {
         return selectedIndex;
     }
     public void removeAnimalDaLista(int index) {
-        //String nomeAnimal = lista_ani.getName();
-        //System.out.println(nomeAnimal);
         model.remove(index);
-        //cliente.removeAnimal(cliente.getListaAnimal().get(selectedIndex));
-        //arquivoXMLAnimal.leXML();
-        //ArrayList<Animal> listaAnimal = arquivoXMLAnimal.getList();
-        //arquivoXMLAnimal.escreveXML(getLista());
     }
     
     private void b_voltarMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_b_voltarMouseClicked
@@ -304,8 +297,6 @@ public class InformacoesCliente extends javax.swing.JFrame {
         controle.removeAnimal(this, itensNaLista, campo_cliente.getText(), model.get(retornaIndexSelecionado()).toString());
         if(itensNaLista > 1)
             removeAnimalDaLista(retornaIndexSelecionado());
-        //itensNaLista--;
-        //System.out.println(model.get(retornaIndexSelecionado()).toString());
     }//GEN-LAST:event_b_remove_aniMouseClicked
 
     public static void main(String args[]) {

@@ -15,6 +15,7 @@ public class ControleCadDeAni {
     
     public ControleCadDeAni() {
        arquivoXMLAnimal.leXML();
+       arquivoXMLCliente.leXML();
     }
         
     public void chamaControleDeClientes(CadastroDeAnimal frameAni, String dono) {
@@ -31,7 +32,14 @@ public class ControleCadDeAni {
         if(!nome.equals("") && !raca.equals("") && !cor.equals("") && !tipo.equals("")) {
             Animal animal = new Animal(nome,raca,cor,tipo);
             cliente.addAnimal(animal);
-            arquivoXMLCliente.escreveXML(cliente, true);
+            if(cliente.getListaAnimal().size() <= 1)
+                arquivoXMLCliente.escreveXML(cliente, true);
+           else {
+                Cliente cliente2 = new Cliente(cliente);
+                arquivoXMLCliente.escreveXML(cliente, false);
+                arquivoXMLCliente.leXML();
+                arquivoXMLCliente.escreveXML(cliente2, true);
+            }
             arquivoXMLAnimal.escreveXML(animal,true);
             JOptionPane.showMessageDialog(frameAni,"Cadastro realizado com sucesso!");
             frameAni.dispose();
